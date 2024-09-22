@@ -19,15 +19,17 @@ mvn spring-boot:run
 ## Testing the API
 Example cURL Commands
 
-```
 Create an account:
+```
 curl -X POST "http://localhost:8080/api/accounts/create?accountId=1&initialBalance=500.00"
 ```
-```
+
 Transfer funds:
+```
 curl -X POST "http://localhost:8080/api/accounts/transfer" -H "Content-Type: application/json" -d '{"fromAccountId":1,"toAccountId":2,"amount":100.00}'
 ```
-```
+
 Get transaction history:
+```
 curl -X GET "http://localhost:8080/api/accounts/1/transactions"
 ```
